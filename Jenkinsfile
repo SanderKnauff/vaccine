@@ -7,16 +7,24 @@ pipeline {
 
     stages {
         stage('clean') {
-            sh 'mvn clean'
+            steps {
+                sh 'mvn clean'
+            }
         }
         stage('build') {
-            sh 'mvn compile'
+            steps {
+                sh 'mvn compile'
+            }
         }
         stage('test') {
-            sh 'mvn test'
+            steps {
+                sh 'mvn test'
+            }
         }
         stage('package') {
-            sh 'mvn test'
+            steps {
+                sh 'mvn test'
+            }
         }
         post {
             always {
